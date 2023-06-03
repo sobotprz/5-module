@@ -1,0 +1,17 @@
+.paragraph {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.paragraph-result.paragraph-result {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: red;
+}
+

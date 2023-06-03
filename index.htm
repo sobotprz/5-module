@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/paragraph.css">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form form__legend">Form currency EUR Exchange to PLN</legend>
+                <p class="paragraph">
+                    <label class="form__label">Euro count to calculate </label>
+                    <input class="form__input js-input-count" type="number" name="ilosc" id="ilosc" placeholder="0.1"
+                        min="0.1" step="0.1" max="999999" value="0.1" required>
+                </p>
+                <p class="paragraph">
+                    <label class="form__label">Exchange rate </label>
+                    <input class="form__input js-input-rate" type="number" name="kurs" id="kurs" min="0.1" step="0.01"
+                        max="999999" required placeholder="4.55" value="4.55">
+                </p>
+            </fieldset>
+            <button class="form__button" type="submit">Calculate</button>
+            <button class="form__button--red" type="reset">Reset</button>
+        </form>
+        <div class="container">
+            <p class="paragraph">
+                <span class="js-result"></span>
+            </p>
+        </div>
+
+        <div class="container">
+            <form class="form js-form__currency">
+                <fieldset class="form__fieldset">
+                    <legend>Currency values</legend>
+                    <label class="form__table2">
+                        EUR
+                        <input class="js-form-value__eur" type="number" min="0.01" value="4.66" name="EUR">
+                    </label>
+                    <label class="form__table2">
+                        USD
+                        <input class="js-form-value__usd" type="number" min="0.01" value="4.15" name="USD">
+                    </label>
+                    <label class="form__table2">
+                        GBP
+                        <input class="js-form-value__gbp" type="number" min="0.01" value="5.25" name="GBP">
+                    </label>
+                    <label class="form__table2">
+                        CHF
+                        <input class="js-form-value__chf" type="number" min="0.01" value="4.63" name="CHF">
+                    </label>
+                </fieldset>
+            </form>
+
+            <form class="form js-form2">
+                <fieldset class="form__fieldset">
+                    <legend class="form form__legend">
+                        Second calculator to PLN
+                    </legend>
+                    <label>
+                        <span class="js-form__input form">Currency </span>
+                        <select class="form js-form__currency1" name="currency1" id="currency1" required>
+                            <option class="js-value__eur" value="4.66">EUR</option>
+                            <option class="js-value__usd" value="4.15">USD</option>
+                            <option class="js-value__gbp" value="5.25">GBP</option>
+                            <option class="js-value__chf" value="4.63">CHF</option>
+                        </select>
+                        <p class="form">
+                            <span class="js-form__input">Count</span>
+                            <input type="number" class="js-form__currency2" name="currency2" list="currency" required
+                                min="0.01" step="0.01">
+                        </p>
+                    </label>
+                </fieldset>
+                <button class="form__button form__button-setcurrency" type="submit">Calculate</button>
+                <button class="form__button--red" type="reset">Reset</button>
+            </form>
+        </div>
+        <div class="container">
+            <p class="paragraph">
+                <span class="js-result2"></span>
+            </p>
+        </div>
+</body>
+
+</html>
